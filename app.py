@@ -29,7 +29,7 @@ selected_example = st.selectbox("Choose an example image:",
 @st.cache_resource # With this model only be loaded once and used mutliple times
 def load_model():
     model = SimpleCNN(num_classes=3) # Initialize the model
-    model.load_state_dict(torch.load("Simplecnn_best.pth", map_location="cpu")) # Load the "trained" data
+    model.load_state_dict(torch.load("simplecnn_best.pth", map_location="cpu")) # Load the "trained" data
     model.eval() 
     return model
 
